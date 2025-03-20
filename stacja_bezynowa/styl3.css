@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header, #banerLewy {
+    background-color: #7c4d6f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+
+nav, #banerPrawy {
+    background-color: #7c4d6f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav a {
+    margin: 0 15px;
+}
+
+nav a img {
+    width: 30px;
+    height: 30px;
+}
+
+
+main {
+    padding: 40px 20px;
+    background-color: #f0eae2;
+}
+
+
+#kalkulator {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#kalkulator h2 {
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #7c4d6f;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #7c4d6f;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5b3d54;
+}
+
+
+aside {
+    margin-top: 30px;
+    text-align: center;
+}
+
+aside img {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+}
+
+
+footer {
+    background-color: #7c4d6f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .download a {
+    color: #f0eae2;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+footer .download a:hover {
+    text-decoration: underline;
+}
