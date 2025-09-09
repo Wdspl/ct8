@@ -6,5 +6,6 @@ a{
   text-decoration: none;
   color: #fff;
 }
-
-<body style="background-color: beige;">
+body{
+   background-color: beige;
+}
