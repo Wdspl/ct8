@@ -1,10 +1,68 @@
-html{
-    text-align: center;
-    background-color: darkslategrey;
-}
-a{
-  text-decoration: none;
-  color: #fff;
+/* Globalne ustawienia */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #2C3E50; /* Ciemnoniebieskie tło */
 }
 
-<body style="background-color: beige;">
+/* Nagłówek */
+header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #34495E; /* ciemniejsze tło nagłówka */
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ECF0F1; /* jasny kolor tekstu */
+}
+
+/* Nawigacja */
+nav {
+    text-align: center;
+    margin-top: 40px;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.menu li {
+    margin: 10px 0;
+}
+
+ul.menu li a {
+    text-decoration: none;
+    color: #ECF0F1; /* jasny tekst */
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efekt hover na linkach */
+ul.menu li a:hover {
+    background-color: #3498DB; /* Niebieskie tło przy najechaniu */
+    color: #fff;
+}
+
+/* Stylowanie tła */
+body {
+    background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%); /* Gradientowe tło */
+}
+
+/* Stylowanie dla responsywności */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    ul.menu li a {
+        font-size: 1.2rem;
+    }
+}
