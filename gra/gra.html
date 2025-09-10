@@ -4,60 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gra w Zgadywanie Liczb</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        input {
-            padding: 10px;
-            width: 50px;
-        }
-        button {
-            padding: 10px 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Zgadnij Liczbę!</h1>
-<p>Wybierz liczbę od 1 do 100.</p>
-<input type="number" id="guess" min="1" max="100">
-<button onclick="makeGuess()">Zgadnij</button>
-<p id="result"></p>
-<p id="attempts"></p>
+    <div class="game-container">
+        <h1>Zgadnij Liczbę!</h1>
+        <p>Wybierz liczbę od 1 do 100.</p>
+        
+        <div class="input-area">
+            <input type="number" id="guess" min="1" max="100" placeholder="?" />
+            <button id="guessBtn">Zgadnij</button>
+        </div>
 
-<script>
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
-    let attempts = 5;
+        <p id="result"></p>
+        <p id="attempts"></p>
+        <button id="resetBtn" class="hidden">Zagraj ponownie</button>
+    </div>
 
-    function makeGuess() {
-        const userGuess = Number(document.getElementById('guess').value);
-        const resultText = document.getElementById('result');
-        const attemptsText = document.getElementById('attempts');
-
-        if (attempts > 0) {
-            if (userGuess === randomNumber) {
-                resultText.textContent = "Gratulacje! Odgadłeś liczbę!";
-                attemptsText.textContent = "";
-            } else {
-                attempts--;
-                if (userGuess < randomNumber) {
-                    resultText.textContent = "Za mało! Spróbuj ponownie.";
-                } else {
-                    resultText.textContent = "Za dużo! Spróbuj ponownie.";
-                }
-                attemptsText.textContent = `Pozostałe próby: ${attempts}`;
-
-                if (attempts === 0) {
-                    resultText.textContent = `Koniec gry! Liczba to ${randomNumber}.`;
-                    attemptsText.textContent = "";
-                }
-            }
-        }
-    }
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
