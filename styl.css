@@ -2,79 +2,112 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Zmieniona czcionka na bardziej nowoczesną */
+    background-color: #000; /* Całkowicie czarne tło */
     color: #fff;
-    background-color: #000; /* Czarny kolor tła */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px; /* Przestrzeń między literami */
 }
 
 /* Nagłówek */
 header {
     text-align: center;
     padding: 60px 0;
-    background-color: #1C1C1C; /* ciemniejsze tło nagłówka */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* cień pod nagłówkiem */
-    border-bottom: 5px solid #3498DB; /* niebieska linia pod nagłówkiem */
+    background-color: rgba(0, 0, 0, 0.7); /* Ciemne tło nagłówka */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8); /* Cień pod nagłówkiem */
+    border-bottom: 4px solid #3498db; /* Niebieska linia pod nagłówkiem */
+    margin-bottom: 40px;
 }
 
 header h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
-    letter-spacing: 2px; /* przestrzeń między literami */
-    color: #ECF0F1; /* jasny kolor tekstu */
+    color: #fff;
     text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Delikatny cień tekstu */
 }
 
-/* Nawigacja */
+/* Menu nawigacyjne */
 nav {
-    text-align: center;
-    margin-top: 40px;
+    margin: 20px;
+    width: 100%;
 }
 
 ul.menu {
     list-style-type: none;
     padding: 0;
     margin: 0;
-}
-
-ul.menu li {
-    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 ul.menu li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.4rem;
-    padding: 12px 20px;
-    border-radius: 8px;
+    font-size: 1.6rem;
+    padding: 15px 30px;
+    border-radius: 10px;
     display: inline-block;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* delikatny cień */
+    background-color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
 }
 
 /* Efekt hover na linkach */
 ul.menu li a:hover {
-    background-color: #3498DB; /* Niebieskie tło przy najechaniu */
+    background-color: #3498db; /* Niebieskie tło przy najechaniu */
     color: #fff;
-    transform: scale(1.05); /* Powiększenie przy najechaniu */
+    transform: translateY(-5px); /* Lekko unosi się przy najechaniu */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Cień zwiększa się przy najechaniu */
 }
 
-/* Stylowanie tła */
-body {
-    background: #000; /* Całkowicie czarne tło */
-}
-
-/* Stylizacja linków w menu */
+/* Dodanie efektu na kliknięcie */
 ul.menu li a:active {
-    background-color: #2980b9; /* Przyciemniony niebieski podczas kliknięcia */
+    background-color: #2980b9; /* Ciemniejszy niebieski przy kliknięciu */
+    transform: translateY(2px); /* Efekt wciśnięcia */
 }
 
-/* Zmniejszenie czcionki na urządzeniach mobilnych */
+/* Dodatkowe animacje dla przycisków */
+ul.menu li a {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tło strony */
+body {
+    background: linear-gradient(135deg, #111, #000); /* Gradient czarnego tła */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsywność na urządzenia mobilne */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     ul.menu li a {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 }
