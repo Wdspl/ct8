@@ -13,8 +13,8 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #000; /* czarne tło */
-      color: #00aaff; /* niebieski tekst */
+      background-color: #181818; /* ciemne tło */
+      color: #ff69b4; /* różowy tekst */
       transition: all 0.4s ease;
     }
 
@@ -23,6 +23,7 @@
       text-align: center;
       font-size: 2rem;
       font-weight: bold;
+      color: #ff4500; /* pomarańczowy nagłówek */
     }
 
     main {
@@ -30,6 +31,7 @@
       max-width: 800px;
       margin: auto;
       line-height: 1.6;
+      color: #ffffff; /* biały tekst */
     }
 
     /* Kontener na przyciski */
@@ -49,30 +51,40 @@
       font-weight: bold;
       border: none;
       border-radius: 10px;
-      background-color: #00aaff;
-      color: #000;
+      background-color: #ff69b4; /* różowy przycisk */
+      color: #fff;
       cursor: pointer;
       transition: background 0.3s, transform 0.2s;
       text-align: center;
     }
 
     .btn:hover {
-      background-color: #0088cc;
+      background-color: #ff1493; /* ciemniejszy róż */
       transform: scale(1.05);
     }
 
-    /* Tryb alternatywny – czarno-żółty */
+    /* Tryb alternatywny – ciemne tło z jasnymi elementami */
     body.yellow-mode {
-      color: #ffdd00; /* żółty tekst */
+      background-color: #fff; /* jasne tło */
+      color: #000; /* czarny tekst */
+    }
+
+    body.yellow-mode header {
+      color: #ffa500; /* pomarańczowy nagłówek w trybie jasnym */
     }
 
     body.yellow-mode .btn {
-      background-color: #ffdd00;
-      color: #000;
+      background-color: #ffa500; /* pomarańczowy przycisk */
+      color: #fff;
     }
 
     body.yellow-mode .btn:hover {
-      background-color: #e6c800;
+      background-color: #ff8c00; /* ciemniejszy pomarańcz */
+    }
+
+    /* Możesz dodać więcej kolorów, np. dla innych sekcji */
+    body.yellow-mode main {
+      color: #000000; /* ciemny tekst w trybie jasnym */
     }
   </style>
 </head>
@@ -80,13 +92,12 @@
   <header>Re zero</header>
   <main>
     <p>
-      <strong>Re zero</strong> Był sobie taki jeden co kochał inna ale ta go nie kochala, potem umarl i dalej go nie kochala za to pokochala go inna ale o nim zapomniala
+      <strong>Re zero</strong> Był sobie taki jeden co kochał inną, ale ta go nie kochała. Potem umarł, ale dalej go nie kochała, za to pokochała go inna, ale o nim zapomniała.
     </p>
 
     <p>
       Gra wyróżnia się mrocznym klimatem, dużą ilością sekretów oraz ogromną regrywalnością.
     </p>
-
 
     <div class="buttons">
       <button class="btn" onclick="toggleMode()">Przełącz tryb (Dostępność)</button>
