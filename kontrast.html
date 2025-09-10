@@ -13,8 +13,8 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #181818; /* ciemne tło */
-      color: #ff69b4; /* różowy tekst */
+      background-color: #000; /* czarne tło */
+      color: #800080; /* purpurowy tekst */
       transition: all 0.4s ease;
     }
 
@@ -23,7 +23,6 @@
       text-align: center;
       font-size: 2rem;
       font-weight: bold;
-      color: #ff4500; /* pomarańczowy nagłówek */
     }
 
     main {
@@ -31,7 +30,6 @@
       max-width: 800px;
       margin: auto;
       line-height: 1.6;
-      color: #ffffff; /* biały tekst */
     }
 
     /* Kontener na przyciski */
@@ -51,54 +49,45 @@
       font-weight: bold;
       border: none;
       border-radius: 10px;
-      background-color: #ff69b4; /* różowy przycisk */
-      color: #fff;
+      background-color: #800080; /* purpurowy przycisk */
+      color: #fff; /* biały tekst w przyciskach */
       cursor: pointer;
       transition: background 0.3s, transform 0.2s;
       text-align: center;
     }
 
     .btn:hover {
-      background-color: #ff1493; /* ciemniejszy róż */
+      background-color: #660066; /* ciemniejszy purpurowy przycisk po najechaniu */
       transform: scale(1.05);
     }
 
-    /* Tryb alternatywny – ciemne tło z jasnymi elementami */
+    /* Tryb alternatywny – czarno-żółty */
     body.yellow-mode {
-      background-color: #fff; /* jasne tło */
-      color: #000; /* czarny tekst */
-    }
-
-    body.yellow-mode header {
-      color: #ffa500; /* pomarańczowy nagłówek w trybie jasnym */
+      color: #ffdd00; /* żółty tekst */
     }
 
     body.yellow-mode .btn {
-      background-color: #ffa500; /* pomarańczowy przycisk */
-      color: #fff;
+      background-color: #ffdd00;
+      color: #000;
     }
 
     body.yellow-mode .btn:hover {
-      background-color: #ff8c00; /* ciemniejszy pomarańcz */
-    }
-
-    /* Możesz dodać więcej kolorów, np. dla innych sekcji */
-    body.yellow-mode main {
-      color: #000000; /* ciemny tekst w trybie jasnym */
+      background-color: #e6c800;
     }
   </style>
 </head>
 <body>
-  <header>Re zero</header>
+  <header>Re zero </header>
   <main>
     <p>
-      <strong>Re zero</strong> Był sobie taki jeden co kochał inną, ale ta go nie kochała. Potem umarł, ale dalej go nie kochała, za to pokochała go inna, ale o nim zapomniała.
+     <strong>Re zero</strong> Był sobie taki jeden co kochał inną, ale ta go nie kochała. Potem umarł, ale dalej go nie kochała, za to pokochała go inna, ale o nim zapomniała.
     </p>
 
     <p>
       Gra wyróżnia się mrocznym klimatem, dużą ilością sekretów oraz ogromną regrywalnością.
     </p>
 
+    <!-- Przycisk przełącznika i powrotu -->
     <div class="buttons">
       <button class="btn" onclick="toggleMode()">Przełącz tryb (Dostępność)</button>
     </div>
