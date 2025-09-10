@@ -1,47 +1,10 @@
-/* Domyślne style */
-html {
+html{
     text-align: center;
     background-color: darkslategrey;
 }
-
-body {
-    background-color: beige;
-    color: black;  /* Domyślny kolor tekstu */
+a{
+  text-decoration: none;
+  color: #fff;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;  /* Domyślny kolor linków */
-}
-
-/* Tryb kontrastowy */
-body.high-contrast {
-    background-color: #000; /* Czarne tło */
-    color: #fff; /* Biały tekst */
-}
-
-body.high-contrast a {
-    color: #ff0; /* Żółty kolor dla linków w trybie kontrastowym */
-}
-
-body.high-contrast h1 {
-    color: #ff0; /* Zmieniamy kolor nagłówków na żółty w trybie kontrastowym */
-}
-
-/* Dodatkowe style kontrastowe dla innych elementów */
-body.high-contrast a:hover {
-    color: #ff4500; /* Zmiana koloru na pomarańczowy przy najechaniu na link */
-}
-button {
-    padding: 10px 20px;
-    background-color: #444;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 10px;
-}
-
-button:hover {
-    background-color: #666;
-}
+<body style="background-color: beige;">
