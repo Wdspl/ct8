@@ -32,3 +32,16 @@ body.high-contrast h1 {
 body.high-contrast a:hover {
     color: #ff4500; /* Zmiana koloru na pomarańczowy przy najechaniu na link */
 }
+button {
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #666;
+}
