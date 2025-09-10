@@ -1,11 +1,32 @@
-html{
+
+html {
     text-align: center;
     background-color: darkslategrey;
 }
-a{
-  text-decoration: none;
-  color: #fff;
+
+body {
+    background-color: beige;
+    color: black;  
 }
-body{
-   background-color: beige;
+
+a {
+    text-decoration: none;
+    color: #fff;  
+}
+
+body.high-contrast {
+    background-color: #000; 
+    color: #fff;
+}
+
+body.high-contrast a {
+    color: #ff0;
+}
+
+body.high-contrast h1 {
+    color: #ff0; 
+}
+
+body.high-contrast a:hover {
+    color: #ff4500; 
 }
