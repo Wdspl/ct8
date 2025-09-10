@@ -4,20 +4,24 @@ html, body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     color: #fff;
-    background-color: #2C3E50; /* Ciemnoniebieskie tło */
+    background-color: #000; /* Czarny kolor tła */
 }
 
 /* Nagłówek */
 header {
     text-align: center;
-    padding: 40px 0;
-    background-color: #34495E; /* ciemniejsze tło nagłówka */
+    padding: 60px 0;
+    background-color: #1C1C1C; /* ciemniejsze tło nagłówka */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* cień pod nagłówkiem */
+    border-bottom: 5px solid #3498DB; /* niebieska linia pod nagłówkiem */
 }
 
 header h1 {
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px; /* przestrzeń między literami */
     color: #ECF0F1; /* jasny kolor tekstu */
+    text-transform: uppercase;
 }
 
 /* Nawigacja */
@@ -29,34 +33,42 @@ nav {
 ul.menu {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 ul.menu li {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 ul.menu li a {
     text-decoration: none;
-    color: #ECF0F1; /* jasny tekst */
-    font-size: 1.5rem;
-    padding: 10px 20px;
-    border-radius: 5px;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 12px 20px;
+    border-radius: 8px;
     display: inline-block;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* delikatny cień */
 }
 
 /* Efekt hover na linkach */
 ul.menu li a:hover {
     background-color: #3498DB; /* Niebieskie tło przy najechaniu */
     color: #fff;
+    transform: scale(1.05); /* Powiększenie przy najechaniu */
 }
 
 /* Stylowanie tła */
 body {
-    background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%); /* Gradientowe tło */
+    background: #000; /* Całkowicie czarne tło */
 }
 
-/* Stylowanie dla responsywności */
+/* Stylizacja linków w menu */
+ul.menu li a:active {
+    background-color: #2980b9; /* Przyciemniony niebieski podczas kliknięcia */
+}
+
+/* Zmniejszenie czcionki na urządzeniach mobilnych */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2.5rem;
