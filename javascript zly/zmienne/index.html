@@ -2,137 +2,16 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Konwerter Liczb</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #e0eafc, #cfdef3);
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    .container {
-      background-color: #ffffff;
-      padding: 40px 50px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      width: 100%;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #2c3e50;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      color: #7f8c8d;
-    }
-
-    label {
-      font-size: 1rem;
-      color: #34495e;
-      margin-bottom: 8px;
-      display: inline-block;
-    }
-
-    input {
-      width: 100%;
-      padding: 14px;
-      margin-top: 8px;
-      margin-bottom: 20px;
-      border: 1px solid #bdc3c7;
-      border-radius: 5px;
-      font-size: 1.1rem;
-      background-color: #f8f9fa;
-      color: #2c3e50;
-      transition: border-color 0.3s ease;
-    }
-
-    input:focus {
-      outline: none;
-      border-color: #3498db;
-    }
-
-    button {
-      padding: 14px 28px;
-      font-size: 1.2rem;
-      background-color: #3498db;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #2980b9;
-      transform: scale(1.05);
-    }
-
-    .wynik {
-      margin-top: 25px;
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #2ecc71;
-    }
-
-    /* Responsywność */
-    @media (max-width: 768px) {
-      .container {
-        padding: 30px 20px;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <title>Konwersja na Number()</title>
+  <link rel="stylesheet" href="style.css"> <!-- Łączenie CSS -->
 </head>
 <body>
+
   <div class="container">
-    <h1>Konwerter Liczb</h1>
-    <p>Wpisz liczbę jako tekst, a zostanie ona przekonwertowana na wartość liczbową!</p>
-
-    <label for="liczbaInput">Wartość (np. 9000):</label>
-    <input type="text" id="liczbaInput" placeholder="Wpisz liczbę...">
-    
-    <button onclick="przeliczLiczbe()">Konwertuj</button>
-
-    <p id="wynik" class="wynik"></p>
+    <h1>Konwersja do Number() w JavaScript</h1>
+    <div class="result" id="output"></div>
   </div>
 
-  <script>
-    function przeliczLiczbe() {
-      var tekstowaLiczba = document.getElementById("liczbaInput").value;
-      let liczbowo = Number(tekstowaLiczba);
-      const intro = "Wartość liczby została ustawiona na";
-
-      if (isNaN(liczbowo)) {
-        document.getElementById("wynik").innerText = "🚫 To nie wygląda jak prawdziwa liczba!";
-      } else {
-        document.getElementById("wynik").innerText = `${intro}: ${liczbowo}`;
-      }
-    }
-  </script>
+  <script src="script.js"></script> <!-- Łączenie JavaScript -->
 </body>
 </html>
