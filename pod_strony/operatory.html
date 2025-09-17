@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operatory w JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #f5f5f5;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            width: 90%;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .result p {
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Interaktywne Operatory w JavaScript</h1>
+        <label for="num1">Liczba 1:</label>
+        <input type="number" id="num1" placeholder="Wpisz liczbę" required>
+        <br>
+
+        <label for="num2">Liczba 2:</label>
+        <input type="number" id="num2" placeholder="Wpisz liczbę" required>
+        <br>
+
+        <button onclick="calculate()">Oblicz</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculate() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').innerHTML = "<strong>Proszę wprowadzić dwie liczby!</strong>";
+                return;
+            }
+
+            // Operacje arytmetyczne
+            const suma = num1 + num2;
+            const roznica = num1 - num2;
+            const iloczyn = num1 * num2;
+            const iloraz = num2 !== 0 ? (num1 / num2) : "Nie można dzielić przez zero!";
+            const reszta = num2 !== 0 ? (num1 % num2) : "Nie można dzielić przez zero!";
+
+            // Operatory porównania
+            const porownanie1 = num1 > num2;
+            const porownanie2 = num1 < num2;
+            const porownanie3 = num1 == num2;
+            const porownanie4 = num1 != num2;
+
+            // Operatory logiczne
+            const and = (num1 > 5) && (num2 < 10);
+            const or = (num1 > 5) || (num2 < 10);
+            const not = !(num1 > num2);
+
+            // Wyświetlanie wyników
+            document.getElementById('result').innerHTML = `
+                <h3>Wyniki:</h3>
+                <p><strong>Suma:</strong> ${suma}</p>
+                <p><strong>Różnica:</strong> ${roznica}</p>
+                <p><strong>Iloczyn:</strong> ${iloczyn}</p>
+                <p><strong>Iloraz:</strong> ${iloraz}</p>
+                <p><strong>Reszta z dzielenia:</strong> ${reszta}</p>
+                <p><strong>a > b:</strong> ${porownanie1}</p>
+                <p><strong>a < b:</strong> ${porownanie2}</p>
+                <p><strong>a == b:</strong> ${porownanie3}</p>
+                <p><strong>a != b:</strong> ${porownanie4}</p>
+                <p><strong>(a > 5 && b < 10):</strong> ${and}</p>
+                <p><strong>(a > 5 || b < 10):</strong> ${or}</p>
+                <p><strong>!(a > b):</strong> ${not}</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
