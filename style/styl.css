@@ -6,10 +6,6 @@ html, body {
     background-color: #000; /* Całkowicie czarne tło */
     color: #fff;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     letter-spacing: 1px; /* Przestrzeń między literami */
 }
@@ -43,8 +39,9 @@ ul.menu {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* zawsze pionowo */
     gap: 20px;
+    align-items: center; /* wyrównanie na środku */
 }
 
 ul.menu li a {
@@ -96,9 +93,6 @@ body {
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Responsywność na urządzenia mobilne */
