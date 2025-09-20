@@ -111,6 +111,6 @@ body {
         font-size: 1.3rem;
     }
     body{
-        size: 2rem;
+        height: auto;
     }
 }
