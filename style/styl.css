@@ -110,4 +110,7 @@ body {
     ul.menu li a {
         font-size: 1.3rem;
     }
+    body{
+        size: 2rem;
+    }
 }
