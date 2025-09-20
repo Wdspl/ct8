@@ -1,0 +1,16 @@
+body
+{
+    background: linear-gradient(#0b2ce3,#590bb3);
+    height: 100vh;
+    font-family: "Roboto";
+    margin: 0 auto;
+    text-align: center;
+}
+ol{
+    list-style-type: upper-alpha;
+    list-style-position: inside
+}
+h2
+{
+    
+}
