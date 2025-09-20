@@ -1,0 +1,83 @@
+body
+{
+     background: linear-gradient(#0b2ce3,#590bb3); 
+    height: 100vh;
+    font-family: "Roboto";
+    text-align: center;
+}
+ol{
+    list-style-type: upper-alpha;
+    list-style-position: inside
+}
+
+a{
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 20px;
+    display: inline-block;
+    transition: 1s;
+    
+}
+.fajne{
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+ 
+    border: 2px solid;
+    border-radius: 20px;
+    width: 200px;
+    align-items: center;
+    list-style-position: inside;
+    text-align: left;
+    transition: 1s;
+}
+.fajne2{
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    color: black;
+    list-style-position: outside;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 20px;
+    width: auto;
+    align-items: center;
+    text-align: left;
+    transition: 1s;
+}
+
+#fajne
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+a:hover
+{
+    transform: 1s;
+    transition: 0.5s;
+    color: white;
+    transform: translateY(-5px);
+    
+}
+.fajne:hover
+{
+    transform: 1s;
+    transition: 0.5s;
+    color: white;
+    transform: translateY(-5px);
+}
+.fajne2:hover
+{
+     transform: 1s;
+    transition: 0.5s;
+    color: white;
+    transform: translateY(-5px);
+}
