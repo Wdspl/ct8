@@ -14,3 +14,6 @@ a, li{
     text-decoration: none;
     
 }
+a{
+    border: 10px;
+}
