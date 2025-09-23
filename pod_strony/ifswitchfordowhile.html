@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Interaktywne Konstrukcje Sterujące</title>
+    <style>
+        .button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .output {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interaktywne Przykłady Konstrukcji Sterujących</h1>
+
+    <button class="button" onclick="showIf()">Pokaż if</button>
+    <button class="button" onclick="showFor()">Pokaż for</button>
+    <button class="button" onclick="showWhile()">Pokaż while</button>
+    <button class="button" onclick="showDoWhile()">Pokaż do-while</button>
+    <button class="button" onclick="showSwitch()">Pokaż switch</button>
+
+    <div id="output" class="output"></div>
+
+    <script>
+        // Funkcja, która wypisuje wynik na stronie
+        function writeToPage(text) {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML += text + "<br>"; // Dodajemy nowy tekst do div'a
+        }
+
+        // 1. Funkcja do pokazywania if
+        function showIf() {
+            let a = 5;
+            let result = "";
+            result += "Zwykły if: ";
+            if (a > 3) {
+                result += "a jest większe niż 3 (zwykły if)";
+            }
+            writeToPage(result);
+        }
+
+        // 2. Funkcja do pokazywania for
+        function showFor() {
+            let result = "<br>Przykład pętli for:<br>";
+            for (let i = 0; i < 5; i++) {
+                result += i + " ";
+            }
+            writeToPage(result);
+        }
+
+        // 3. Funkcja do pokazywania while
+        function showWhile() {
+            let result = "<br>Przykład pętli while:<br>";
+            let j = 0;
+            while (j < 5) {
+                result += j + " ";
+                j++;
+            }
+            writeToPage(result);
+        }
+
+        // 4. Funkcja do pokazywania do-while
+        function showDoWhile() {
+            let result = "<br>Przykład pętli do-while:<br>";
+            let k = 0;
+            do {
+                result += k + " ";
+                k++;
+            } while (k < 5);
+            writeToPage(result);
+        }
+
+        // 5. Funkcja do pokazywania switch
+        function showSwitch() {
+            let a = 5;
+            let result = "<br>Przykład switch:<br>";
+            switch (a) {
+                case 1:
+                    result += "a to 1";
+                    break;
+                case 2:
+                    result += "a to 2";
+                    break;
+                case 3:
+                    result += "a to 3";
+                    break;
+                case 5:
+                    result += "a to 5";
+                    break;
+                default:
+                    result += "a to coś innego";
+            }
+            writeToPage(result);
+        }
+    </script>
+
+</body>
+</html>
