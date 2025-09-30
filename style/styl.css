@@ -112,9 +112,9 @@ hr {
     border: 0;
     height: 2px; /* Grubość linii */
     background-color: #3498db; /* Kolor linii */
-    margin: 20px auto;
-    width: 80%; /* Długość linii */
-    max-width: 1200px; /* Maksymalna szerokość linii */
+    margin: 20px 0;
+    width: 100%; /* Pełna szerokość ekranu */
+    max-width: 100%; /* Upewnij się, że linia nie będzie miała maksymalnej szerokości */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Cień linii */
 }
 
