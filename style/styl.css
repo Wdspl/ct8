@@ -109,9 +109,9 @@ body {
     }
 }
 hr {
-  border: none; /* Usuwa domyślną ramkę */
-  height: 2px;  /* Grubość linii */
-  background-color: blue; /* Kolor linii */
-  margin: 20px 0; /* Dodać margines, jeśli chcesz przestrzeń wokół linii */
+  border: 0;
+  border-top: 2px solid blue; /* Kolor niebieski, grubość linii */
+  margin: 20px 0;
 }
+
 
