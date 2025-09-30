@@ -108,3 +108,8 @@ body {
         font-size: 1.3rem;
     }
 }
+hr
+{
+    height: 2px;
+  background-color: blue;
+}
