@@ -109,13 +109,13 @@ body {
     }
 }
 hr {
-  border: 0;
-  border-top: 2px solid #3498db; /* Kolor niebieski, grubość linii */
-  margin: 20px 0;
-  height: 2px; /* Dodatkowe zapewnienie, że linia ma wysokość */
-  width: 80%;  /* Szerokość linii, można dostosować */
-  margin-left: auto;
-  margin-right: auto; /* Wyśrodkowanie */
+    border: 0;
+    height: 2px; /* Grubość linii */
+    background-color: #3498db; /* Kolor linii */
+    margin: 20px auto;
+    width: 80%; /* Długość linii */
+    max-width: 1200px; /* Maksymalna szerokość linii */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Cień linii */
 }
 
 
