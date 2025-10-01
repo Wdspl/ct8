@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: darkgray;
+            font-family: 'Kode mono', Arial;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        p
+        {
+            margin-top: 20%;
+            padding: 10px;
+            width: fit-content;
+            transition: 1s;
+        }
+        p:hover
+        {
+            color: darkgrey;
+            background-color: gray;
+            border-radius: 15px;
+            translate: 10px;
+            transition: 1s;
+            transform: 1s;
+            cursor: default;
+        }
+      
+    </style>
+</head>
+<body>
+    <script>
+        witaj(); //moze byc
+        function witaj()
+        {
+            console.log("Witaj");
+        }
+        
+        const witaj2 = function()
+        {
+            console.log("Witaj 2");
+        }
+        witaj2();//tu musi byc bo to nie dziala wstecz
+
+    const witaj3 = () =>//funckcja strzalkowa
+    {
+        console.log("Witaj 3")
+    }
+    witaj3();
+    </script>
+    <p>Kliknij F12 i wejdz w konsole</p>
+</body>
+</html>
